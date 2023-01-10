@@ -2,6 +2,9 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Wish.Authorization;
+using Wish.Todos;
+using Wish.Todos.Dto;
+using Wish.Todos.Dtos;
 
 namespace Wish
 {
@@ -13,6 +16,16 @@ namespace Wish
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<WishAuthorizationProvider>();
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(config =>
+            {
+                config.CreateMap<CreateTodoInput, Todo>()
+                      .ForMember(u => u.IsActive, options => options.MapFrom(input => (int)input.IsActive));
+                config.CreateMap<UpdateTodoInput, Todo>()
+                      .ForMember(u => u.IsActive, options => options.MapFrom(input => (int)input.IsActive));
+                config.CreateMap<Todo, TodoDto>()
+                      .ForMember(u => u.IsActive, options => options.MapFrom(input => (TaskState)input.IsActive));
+            });
+            Configuration.Settings.Providers.Add<MySettingProvider>();
         }
 
         public override void Initialize()

@@ -1,5 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["src/Wish.Web.Host/Wish.Web.Host.csproj", "src/Wish.Web.Host/"]
 COPY ["src/Wish.Web.Core/Wish.Web.Core.csproj", "src/Wish.Web.Core/"]
@@ -18,7 +17,7 @@ COPY ["src/Wish.EntityFrameworkCore", "src/Wish.EntityFrameworkCore"]
 WORKDIR "/src/src/Wish.Web.Host"
 RUN dotnet publish -c Release -o /publish --no-restore
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 EXPOSE 80
 WORKDIR /app
 COPY --from=build /publish .

@@ -1,20 +1,28 @@
-﻿using System;
+﻿using Abp.AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wish.Authorization.Users;
 
 namespace Wish.Todos.Dto
 {
     /// <summary>
     /// 新增
     /// </summary>
+    [AutoMapTo(typeof(Todo))]
     public class CreateTodoDto
     {
         /// <summary>
         /// 工作代號
         /// </summary>
-        public int Id { get; set; }
+        //public long Id { get; set; }
+
+        /// <summary>
+        /// 父層代號
+        /// </summary>
+        public long Parent { get; set; }
 
         /// <summary>
         /// 是否作用中
@@ -49,12 +57,7 @@ namespace Wish.Todos.Dto
         /// <summary>
         /// 工作順序
         /// </summary>
-        public int Sort { get; set; }
-
-        /// <summary>
-        /// 父層代號
-        /// </summary>
-        public int Parent { get; set; }
+        public int? Sort { get; set; }
 
         /// <summary>
         /// 建立時間

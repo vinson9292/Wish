@@ -1639,11 +1639,11 @@ namespace Wish.Migrations
 
             modelBuilder.Entity("Wish.Todos.Todo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime2");
@@ -1663,8 +1663,8 @@ namespace Wish.Migrations
                     b.Property<int>("IsActive")
                         .HasColumnType("int");
 
-                    b.Property<int>("Parent")
-                        .HasColumnType("int");
+                    b.Property<long>("Parent")
+                        .HasColumnType("bigint");
 
                     b.Property<int?>("Sort")
                         .HasColumnType("int");

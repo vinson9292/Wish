@@ -13,7 +13,7 @@ namespace Wish.EntityFrameworkCore.Repositories
     /// <summary>
     /// TodoRepository
     /// </summary>
-    public class TodoRepository : WishRepositoryBase<Todo,int>,ITodoRepository
+    public class TodoRepository : WishRepositoryBase<Todo,long>,ITodoRepository
     {
         public TodoRepository(IDbContextProvider<WishDbContext> dbContextProvider) : base(dbContextProvider)
         { 

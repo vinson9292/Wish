@@ -117,5 +117,23 @@
     <text name="ResetPasswordStepOneInfo">1. Enter your administrator password</text>
     <text name="ResetPasswordStepTwoInfo">2. Copy this random password so you can send it to the user</text>
     <text name="UsersActivation">Users activation</text>
+	<!--Task-->
+	<!--<text name="Cancel">Cancel</text>
+	<text name="OK">OK</text>-->
+	<text name="CreateNewTask">CreateNewTask</text>
+	<text name="TaskDetails">TaskDetails</text>
+	<text name="TaskPermission">TaskPermission</text>
+	<text name="EditTask">EditTask</text>
+	<text name="DeleteTasksConfirm">DeleteTasksConfirm？</text>
+
+	<text name="id">Id</text>
+	<text name="title">Title</text>
+	<text name="description">Description</text>
+	<text name="startTime">StartTime</text>
+	<text name="endTime">EndTime</text>
+	<text name="detail">Detail</text>
+	<text name="sort">Sort</text>
+
+	  <text name="Tasks">Tasks</text>
   </texts>
 </localizationDictionary>

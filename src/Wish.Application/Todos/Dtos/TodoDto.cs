@@ -13,13 +13,18 @@ namespace Wish.Todos.Dto
     /// <summary>
     /// 待辦項目
     /// </summary>
-    [AutoMapTo(typeof(Todo))]
-    public class TodoDto : EntityDto<int>
+    [AutoMapFrom(typeof(Todo))]
+    public class TodoDto : EntityDto<long>
     {
         /// <summary>
         /// 工作代號
         /// </summary>
-        public int Id { get; set; }
+        //public long Id { get; set; }
+
+        /// <summary>
+        /// 父層代號
+        /// </summary>
+        public long Parent { get; set; }
 
         /// <summary>
         /// 是否作用中
@@ -56,9 +61,6 @@ namespace Wish.Todos.Dto
         /// </summary>
         public int? Sort { get; set; }
 
-        /// <summary>
-        /// 父層代號
-        /// </summary>
-        public int Parent { get; set; }
+
     }
 }

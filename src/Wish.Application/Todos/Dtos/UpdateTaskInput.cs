@@ -13,7 +13,7 @@ namespace Wish.Todos.Dtos
         /// <summary>
         /// 工作代號
         /// </summary>
-        public int Id { get; set; }
+        //public long Id { get; set; }
 
         /// <summary>
         /// 是否作用中
@@ -53,6 +53,6 @@ namespace Wish.Todos.Dtos
         /// <summary>
         /// 父層代號
         /// </summary>
-        public int Parent { get; set; }
+        public long Parent { get; set; }
     }
 }

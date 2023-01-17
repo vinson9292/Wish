@@ -12,6 +12,10 @@ namespace Wish.Todos.Dtos
     public class GetTodosInput
     {
         /// <summary>
+        /// id
+        /// </summary>
+        //public long? Id { get; set; }
+        /// <summary>
         /// 是否作用中
         /// </summary>
         public TaskState? State { get; set; }

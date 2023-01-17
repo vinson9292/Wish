@@ -11,7 +11,7 @@ namespace Wish.IRepositories
     /// <summary>
     /// ITodoRepository
     /// </summary>
-    public interface ITodoRepository : IRepository<Todo>
+    public interface ITodoRepository : IRepository<Todo,long>
     {
         List<Todo> GetTodos();
     }

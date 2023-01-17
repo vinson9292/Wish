@@ -7,18 +7,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Wish.Todos
 {
     [Table("Todos")]
-    public class Todo : IEntity, IHasCreationTime
+    public class Todo : IEntity<long>, IHasCreationTime
     {
         /// <summary>
         /// 工作代號
         /// </summary>
         [Key]
-        public virtual int Id { get; set; }
+        public virtual long Id { get; set; }
 
         /// <summary>
         /// 父層代號
         /// </summary>
-        public virtual int Parent { get; set; }
+        public virtual long Parent { get; set; }
 
         [Required]
         /// <summary>
@@ -49,7 +49,7 @@ namespace Wish.Todos
         /// 結束時間
         /// </summary>
         [Required]
-        public virtual DateTime EndTime { get; set; } = new DateTime();
+        public virtual DateTime EndTime { get; set; } = DateTime.Now;
 
         /// <summary>
         /// 工作明細

@@ -10,10 +10,14 @@ namespace Wish.Todos
 {
     public interface ITodosAppService : IApplicationService
     {
-        GetTodosOutput GetTodos(GetTodosInput input);
+        //GetTodosOutput GetAll();
 
-        void UpdateTask(UpdateTodoInput input);
+        //GetTodosOutput Get(GetTodosInput input);
 
-        void CreateTask(CreateTodoInput input);
+        //void Detele(int id);
+
+        //void Create(CreateTodoInput input);
+
+        //void Update(UpdateTodoInput input);
     }
 }

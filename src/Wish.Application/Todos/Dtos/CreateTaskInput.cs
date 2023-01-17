@@ -11,7 +11,6 @@ namespace Wish.Todos.Dtos
     /// <summary>
     /// CreateTodoInput
     /// </summary>
-    [AutoMapTo(typeof(Todo))]
     public class CreateTodoInput
     {
         /// <summary>
@@ -52,6 +51,6 @@ namespace Wish.Todos.Dtos
         /// <summary>
         /// 父層代號
         /// </summary>
-        public int Parent { get; set; }
+        public long Parent { get; set; }
     }
 }
